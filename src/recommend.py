@@ -57,9 +57,7 @@ def setup_recommendation_system():
 movies_df, similarity_matrix = setup_recommendation_system()
 
 
-# -------------------------------
-# 5️⃣ Define function to get similar movies
-# -------------------------------
+# Define function to get similar movies
 def get_recommendations(movie_title):
     # Check if setup was successful
     if movies_df is None or similarity_matrix is None:
@@ -78,4 +76,4 @@ def get_recommendations(movie_title):
     top_movies = sorted_scores[1:6]  # skip itself, take top 5
 
     # return only the movie names
-    return [movies_df.iloc[i]['title'] for i, _ in top_movies]
+    return [movies_df.iloc[i]['title'] for i, _ in top_movies] 
